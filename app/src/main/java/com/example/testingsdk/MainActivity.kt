@@ -25,6 +25,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.lifecycleScope
+import com.cards.session.cards.models.BillingInformationDto
 import com.cards.session.cards.sdk.CardSessions
 import com.cards.session.cards.sdk.create
 import com.example.testingsdk.ui.theme.TestingSDKTheme
@@ -75,6 +76,18 @@ class MainActivity : ComponentActivity() {
                     cardholderEmail = "1234@qq.com",
                     cardholderPhoneNumber = "+621234567890",
                     paymentSessionId = paymentSessionId,
+                    billingInformation = BillingInformationDto(
+                        firstName = "Budi",
+                        lastName = "Santoso",
+                        email = "budi@example.co.id",
+                        phoneNumber = "+6281234567890",
+                        streetLine1 = "Jl. Jend. Sudirman No.Kav 48A",
+                        streetLine2 = "",
+                        city = "Jakarta",
+                        provinceState = "DKI Jakarta",
+                        country = "ID",
+                        postalCode = "12190"
+                    )
                 )
                 Log.d("MainActivity", "Xendit Response: $response")
                 // Update state with the message from the response
